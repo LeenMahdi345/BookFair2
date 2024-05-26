@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: rgb(212, 169, 116);
+        }
+
+     .button {
+    padding: 7px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border-width: 2px;
+    border-color: #aa661a;
+    font-family: "Lobster", sans-serif;
+    margin-left: 873px;
+    margin-top: -81px;
+}
+        .butt{
+         
+            border-width: 5px;
+            background-color: #ffffff;
+    color: rgb(0, 0, 0);
+   font-size: 21px;
+    padding: 10px 20px;
+    margin: 36px 43px;
+
+    border-radius: 25px;
+    cursor: pointer;
+    border-color: rgb(43, 18, 9);
+    width: 19%;
+        }
+       
+            .b {
+    border-width: 4px;
+    background-color: #ffffff;
+    color: rgb(0 0 0);
+    font-size: 19px;
+    padding: 15px -37px;
+    margin: 8px 15px;
+    border-radius: -67px;
+    cursor: pointer;
+    border-color: rgb(218 0 0);
+    width: 21%;
+
+
+        }
+       
+            .message {
+    display: none;
+    margin-top: 20px;
+    background-color: white;
+    width: 21%;
+    margin-left: 551px;}
+        .men{
+            margin-top: 53px;
+    margin-bottom: 76px;
+    color: #ffffff;
+    font-size: 38px;
+    margin-left: 676px;
+}
+.sure{
+    margin-top: 53px;
+    margin-bottom: 76px;
+    color:#cd0000;
+    font-size: 25px;
+}
+        
+        .book{
+    color: #ffffff;
+    font-size: 49px;
+    margin-right:1000px ;
+}
+
+
+    </style>
+</head>
+<body>
+    <h1 class="book">Book Fair</h1>
+    <button class="button" onclick="window.location.href='Index.html'">الصفحة الرئيسية</button>
+    <h1 class="men">اختر الكتب المراد شرائها</h1>
+    <button class="butt" onclick="showMessage(1)"> فيزيا1</button>
+    <button class="butt" onclick="showMessage(2)"> فيزيا2</button>
+    <button class="butt" onclick="showMessage(3)"> الكترونيات</button>
+    <button class="butt" onclick="showMessage(4)">أساليب في الرياضيات</button>
+    <button class="butt" onclick="showMessage(5)">البصريات</button>
+
+    <div id="message" class="message">
+        <p class="sure">Do you want to buy it?</p>
+        <button class="b" onclick="handleConfirmation(true)">Yes</button>
+        <button class="b" onclick="handleConfirmation(false)">No</button>
+    </div>
+
+    <button class="button" onclick="window.location.href='logout.html'">تسجيل خروج</button>
+    <script>
+        function showMessage(buttonNumber) {
+            document.getElementById('message').style.display = 'block';
+        }
+
+        function handleConfirmation(isConfirmed) {
+            if (isConfirmed) {
+                alert('Done');
+            }
+            document.getElementById('message').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
